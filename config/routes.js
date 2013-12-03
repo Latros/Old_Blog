@@ -49,6 +49,10 @@ module.exports.routes = {
 
   '/about': {
     view: 'static/about'
+  },
+
+  '/links': {
+    view: 'static/links'
   }
 
   /*

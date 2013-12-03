@@ -81,7 +81,7 @@ module.exports = {
 
       post = {};
 
-      posts.sort().reverse();
+      posts.reverse();
 
       console.log('info'.green + ': Visitor' + ': ' + req.connection.remoteAddress.green + ' is now viewing ' + 'Home Page'.green + '.');
 

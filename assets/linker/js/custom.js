@@ -1,6 +1,17 @@
 jQuery(document).ready(function($) {
 
-  var commentFormHeight = $('.form-create-comment').hide().height();
+  /* --------------------------------------
+      Page-specific functionality
+      PAGE: Contact
+     -------------------------------------- */
+
+  // -----------------------------------------
+      /* Misc non-cosmetic functionality */
+  // -----------------------------------------
+
+  // -----------------------------------------
+        /* Misc cosmetic functionality */
+  // -----------------------------------------
 
   // Fancy hover toggle on the header image to show the credits
   $('.top-image').on('mouseenter', function(){
