@@ -9,11 +9,6 @@ sftp-config.json
 */sftp-config.json
 *sftp-config.json
 sftp-config.json
-*.adapters*.js
-/.adapters.js
-*/adapters.js
-*adapters.js
-adapters.js
 
 #################
 ## Eclipse

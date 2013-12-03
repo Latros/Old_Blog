@@ -10,17 +10,68 @@ jQuery(document).ready(function($) {
 -----------------------------------------------------------------
 */
 
-/* Cosmetic */
-// Display the comment form
-$('.post h3').on('click', function(){
-  $('.form-create-comment').slideToggle();
-});
-/* /End cosmetic */
+if ( window.location.href.indexOf('/read') > -1 ) {
+  console.log('Current page is: read');
 
-/* Non-cosmetic */
-/* /End Non-cosmetic*/
+  /* Cosmetic */
+  // Display the comment form
+  $('.post h3').on('click', function(){
+    $('.form-create-comment').slideToggle();
+  });
+  /* /End cosmetic */
 
-/* ---- /Page-specific functionality for page: /read ---- */
+  /* Non-cosmetic */
+  /* /End Non-cosmetic*/
+
+}
+
+/*
+-----------------------------------------------------------------
+|
+| Page specific functionality
+| Page: /about
+|
+-----------------------------------------------------------------
+*/
+
+if ( window.location.href.indexOf('/about') > -1 ) {
+  console.log('Current page is: about');
+
+  /* Cosmetic */
+  /* /End cosmetic */
+
+  /* Non-cosmetic */
+
+  // If the URL dictates they were linked to view the 365 section,
+  // scroll to that section
+  if ( window.location.href.indexOf('?section=365') > -1 ) {
+    console.log('Scrolling to section: 365');
+    $('html, body').animate({
+      scrollTop: $('.yearofcode').offset().top
+    }, 300);
+  }
+
+  // If the URL dictates they were linked to view the advocate
+  // section, scroll to that section
+  if ( window.location.href.indexOf('?section=advocate') > -1 ) {
+    console.log('Scrolling to section: advocate');
+    $('html, body').animate({
+      scrollTop: $('.advocate').offset().top
+    }, 300);
+  }
+
+  // If the URL dictates they were linked to view the hosting
+  // section, scroll to that section
+  if ( window.location.href.indexOf('?section=hosting') > -1 ) {
+    console.log('Scrolling to section: hosting');
+    $('html, body').animate({
+      scrollTop: $('.hosting').offset().top
+    }, 300);
+  }
+
+  /* /End Non-cosmetic*/
+
+}
 
 /*
 -----------------------------------------------------------------
@@ -32,8 +83,6 @@ $('.post h3').on('click', function(){
 
 
 
-/* ---- /End non-page-specific non-cosmetic functionality ---- */
-
 /*
 -----------------------------------------------------------------
 |
@@ -44,13 +93,11 @@ $('.post h3').on('click', function(){
 
 // Fancy hover toggle on the header image to show the credits
 $('.top-image').on('mouseenter', function(){
-  $('.top-image-credits').fadeIn(500);
+  $('.top-image-credits').fadeIn(150);
 });
 $('.top-image').on('mouseleave', function(){
-  $('.top-image-credits').fadeOut(500);
+  $('.top-image-credits').fadeOut(150);
 });
-
-/* ---- /End non-page-specific non-cosmetic functionality ---- */
 
 });
 // End document ready
