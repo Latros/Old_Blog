@@ -34,6 +34,8 @@ if ( window.location.href.indexOf('/read') > -1 ) {
 -----------------------------------------------------------------
 */
 
+$('.yearofcode i, .hosting i, .advocate i').hide();
+
 if ( window.location.href.indexOf('/about') > -1 ) {
   console.log('Current page is: about');
 
@@ -46,6 +48,7 @@ if ( window.location.href.indexOf('/about') > -1 ) {
   // scroll to that section
   if ( window.location.href.indexOf('?section=365') > -1 ) {
     console.log('Scrolling to section: 365');
+    $('.yearofcode i').show().fadeOut(3000);
     $('html, body').animate({
       scrollTop: $('.yearofcode').offset().top
     }, 300);
@@ -55,6 +58,7 @@ if ( window.location.href.indexOf('/about') > -1 ) {
   // section, scroll to that section
   if ( window.location.href.indexOf('?section=advocate') > -1 ) {
     console.log('Scrolling to section: advocate');
+    $('.advocate i').show().fadeOut(3000);
     $('html, body').animate({
       scrollTop: $('.advocate').offset().top
     }, 300);
@@ -64,6 +68,7 @@ if ( window.location.href.indexOf('/about') > -1 ) {
   // section, scroll to that section
   if ( window.location.href.indexOf('?section=hosting') > -1 ) {
     console.log('Scrolling to section: hosting');
+    $('.hosting i').show().fadeOut(3000);
     $('html, body').animate({
       scrollTop: $('.hosting').offset().top
     }, 300);

@@ -29,27 +29,18 @@ module.exports = {
    */
   category: function(req, res, next) {
 
-    var category = req.param('category'), posts;
-
-    Post.find(function foundPosts (err, recentposts) {
-      if (err) return next(err);
-
-      recentposts.sort();
-
-      posts = recentposts;
-    });
+    var category = req.param('category');
 
     Post
-    .findByCategory(category)
+    .findByCategory(category).sort('createdAt')
     .exec(function (err, categoryposts) {
 
       if (err) return res.serverError(err);
       if (!categoryposts) return next();
 
-      categoryposts.sort().reverse();
+      categoryposts.reverse();
 
       res.view({
-        posts: posts,
         categoryposts: categoryposts,
         category: category
       });
