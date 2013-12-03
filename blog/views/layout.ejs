@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog | Sam Stiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- EXTERNAL STYLES -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- EXTERNAL STYLES END -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/linker/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/linker/styles/styles.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <header class="pull-right">
+            <nav>
+              <a href="/">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+              <a href="#">Links</a>
+
+              |
+
+              <a href="#">Programming</a>
+              <a href="#">Climbing</a>
+              <a href="#">Misc</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-image">
+      <div class="container">
+        <h5 class="top-image-credits">Photo credit: <a href="http://www.flickr.com/photos/christianhapgood/5099909707/">"Climbing in Kamouraska", Christian Hapgood, 2008</a></h5>
+      </div>
+    </div>
+
+    <div class="primary-content container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="posts">
+
+          <!-- DYNAMICALLY LOADED CONTENT -->
+
+          <%- body %>
+
+          <!-- DYNAMICALLY LOADED CONTENT END -->
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="sidebar">
+            <div class="about">
+
+              <p class="first">I'm a developer at <a href="http://orangesprocket.com">OrangeSprocket</a>, the creator of <a href="#">BeauCSS</a>, an avid <a href="#">rock climber</a> (and the <a href="#">webmaster</a> of most rock climbing organizations/sites in N.B.), and a <a href="/categories/workflow/">developer advocate</a> (unofficial). I'm also on <a href="#"><i class="fa fa-github"></i>GitHub</a>.</p>
+
+              <p>I live in Fredericton, NB, Canada.</p>
+
+              <p><a href="/contact/">Contact me</a> or <a href="/about/">read more about me</a>.</p>
+
+              <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a> <span>|</span> <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+
+              <img src="/images/profile.jpg">
+            </div>
+
+            <div class="archives">
+              <h2>Recent Posts</h2>
+              <ul>
+                <li><a href="#"><i class="fa fa-sun-o"></i>Adam & Austin @ CL</a></li>
+                <li><a href="#"><i class="fa fa-code"></i>A better workflow with Sublime Text</a></li>
+                <li><a href="#"><i class="fa fa-sun-o"></i>Finger pain and recovery</a></li>
+                <li><a href="#"><i class="fa fa-code"></i>Introducing BeauCSS</a></li>
+                <li><a href="#"><i class="fa fa-sun-o"></i>Woodlot boulders</a></li>
+              </ul>
+            </div>
+
+            <div class="categories">
+              <h2>Categories</h2>
+              <ul>
+                <li><a href="#"><i class="fa fa-code"></i>Programming</a></li>
+                <li><a href="#"><i class="fa fa-sun-o"></i>Climbing</a></li>
+                <li><a href="#"><i class="fa fa-question misc"></i>Misc</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/jquery.min.js"></script>
+    <script src="/linker/js/bootstrap.min.js"></script>
+    <script src="/linker/js/custom.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

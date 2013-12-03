@@ -1,0 +1,11 @@
+
+<% _.each(posts, function(post) { %>
+  <div class="post">
+    <h3><i class="fa fa-clock-o"></i> <%= post.createdAt.substring(0,10) %> by <%- post.author %></h3>
+    <h2><a href="/post/view/<%= post.id %>"><i class="fa fa-<%- post.icon %>"></i><%= post.title %></a></h2>
+
+    <%- post.content %>
+
+    <!-- <h3><a href="#"><i class="fa fa-comments"></i>Leave a comment</a></h3> -->
+  </div>
+<% }) %>
