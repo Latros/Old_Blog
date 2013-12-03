@@ -29,8 +29,8 @@ module.exports = {
    * v-------- change this for deployment / dev --------v
    *
    */
-  // port: 80,
-  port: 1337,
+  port: 80,
+  // port: 1337,
   /*
    * ^-------- / end --------^
    */
@@ -42,8 +42,8 @@ module.exports = {
    * v-------- change this for deployment / dev --------v
    *
    */
-  // host: 'samstil.es',
-  host: 'localhost',
+  host: 'samstil.es',
+  // host: 'localhost',
   /*
    * ^-------- / end --------^
    */

@@ -13,15 +13,10 @@ jQuery(document).ready(function($) {
 if ( window.location.href.indexOf('/read') > -1 ) {
   console.log('Current page is: read');
 
-  /* Cosmetic */
   // Display the comment form
   $('.post h3').on('click', function(){
     $('.form-create-comment').slideToggle();
   });
-  /* /End cosmetic */
-
-  /* Non-cosmetic */
-  /* /End Non-cosmetic*/
 
 }
 
@@ -34,15 +29,10 @@ if ( window.location.href.indexOf('/read') > -1 ) {
 -----------------------------------------------------------------
 */
 
-$('.yearofcode i, .hosting i, .advocate i').hide();
 
 if ( window.location.href.indexOf('/about') > -1 ) {
   console.log('Current page is: about');
-
-  /* Cosmetic */
-  /* /End cosmetic */
-
-  /* Non-cosmetic */
+  $('.yearofcode i, .hosting i, .advocate i').hide();
 
   // If the URL dictates they were linked to view the 365 section,
   // scroll to that section
@@ -73,8 +63,6 @@ if ( window.location.href.indexOf('/about') > -1 ) {
       scrollTop: $('.hosting').offset().top
     }, 300);
   }
-
-  /* /End Non-cosmetic*/
 
 }
 
