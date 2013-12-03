@@ -1,8 +1,9 @@
 #############
-## Python
+## Stuff
 #############
 
 node_modules/
+sftp-config.json
 
 #################
 ## Eclipse
