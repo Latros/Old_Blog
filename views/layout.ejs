@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><% if ( post.title ) { %><%= post.title %> | <% } %>Blog | Sam Stiles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- EXTERNAL STYLES -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- EXTERNAL STYLES END -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/linker/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/linker/styles/styles.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <header class="pull-right">
+            <nav>
+              <a href="/">Home</a>
+              <a href="/about">About</a>
+              <a href="/contact">Contact</a>
+              <a href="/links">Links</a>
+
+              |
+
+              <a href="/category/Programming">Programming</a>
+              <a href="/category/Climbing">Climbing</a>
+              <a href="/category/Misc">Misc</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-image">
+      <div class="container">
+        <h5 class="top-image-credits">Photo credit: <a href="http://www.flickr.com/photos/christianhapgood/5099909707/">"Climbing in Kamouraska", Christian Hapgood, 2008</a></h5>
+      </div>
+    </div>
+
+    <div class="primary-content container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="posts">
+
+          <!-- DYNAMICALLY LOADED CONTENT -->
+
+          <%- body %>
+
+          <!-- DYNAMICALLY LOADED CONTENT END -->
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="sidebar">
+            <div class="about">
+
+              <p class="first">I'm a developer at <a href="http://orangesprocket.com">OrangeSprocket</a>, the creator of an up-and-coming OOCSS framework called <a href="#">BeauCSS</a>, an avid <a href="/category/climbing">rock climber</a>, a <a href="/about/#hosting">webmaster</a>, a <a href="/about/#advocate">developer advocate</a> (unofficial) and a lover of all things nerdy.</p>
+
+              <p>I'm attempting to spend at least an hour writing recreational code (E.G. coding at work won't count) <i>every day</i> for an entire year. I'm also on <a href="#"><i class="fa fa-github"></i>GitHub</a>.</p>
+
+              <p>I live in Fredericton, NB, Canada.</p>
+
+              <p><a href="/contact">Contact me</a> or <a href="/about">read more about me</a>.</p>
+
+              <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a> <span>|</span> <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+
+              <img src="/images/profile.jpg">
+            </div>
+
+            <div class="categories">
+              <h2>Categories</h2>
+              <ul>
+                <li><a href="/category/Programming"><i class="fa fa-code"></i>Programming</a></li>
+                <li><a href="/category/Climbing"><i class="fa fa-sun-o"></i>Climbing</a></li>
+                <li><a href="/category/Misc"><i class="fa fa-question misc"></i>Misc</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="/linker/js/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js"></script>
+    <script src="/linker/js/app.js"></script>
+    <script src="/linker/js/jquery.min.js"></script>
+    <script src="/linker/js/bootstrap.min.js"></script>
+    <script src="/linker/js/custom.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

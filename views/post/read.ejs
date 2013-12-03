@@ -1,0 +1,26 @@
+<div class="post">
+  <h3><i class="fa fa-clock-o"></i> <%= post.createdAt.toString().substring(0,10) %> by <%- post.author %></h3>
+  <h2><a href="/read/<%= post.slug %>"><i class="fa fa-<%- post.icon %>"></i><%= post.title %></a></h2>
+
+  <%- post.content %>
+
+<!--   <h3><i class="fa fa-comments"></i>Leave a comment</h3>
+
+  <form action="/comment/create/" method="POST" class="form-create-comment">
+    <label>
+      Name
+      <input type="text" class="form-control" placeholder="Your name ..." name="name">
+    </label>
+    <label>
+      Email
+      <input type="text" class="form-control" placeholder="Your email ..." name="email">
+    </label>
+    <label>
+      Comment
+      <textarea placeholder="Your comment ..." name="comment" class="form-control"></textarea>
+    </label>
+    <input type="hidden" value="<%= post.slug %>" name="post_slug">
+    <input type="submit" value="submit" class="btn btn-primary btn-block">
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+  </form> -->
+</div>
