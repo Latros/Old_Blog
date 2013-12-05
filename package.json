@@ -1,6 +1,6 @@
 {
     "private": true,
-    "version": "1.0.0-1",
+    "version": "1.0.1",
     "description": "Blog back-end behind http://samstil.es/",
     "dependencies": {
         "sails": "0.9.4",

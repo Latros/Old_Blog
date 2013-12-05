@@ -76,18 +76,19 @@ module.exports = {
   },
 
   list: function(req, res, next) {
-    Post.find().sort('createdAt').exec(function foundPosts (err, posts) {
+    Post.find().sort('createdAt').exec(function (err, posts) {
       if (err) return next(err);
 
-      post = {};
+      var count = posts.length;
 
       posts.reverse();
+
+      console.log('Total posts: ' + count);
 
       console.log('info'.green + ': Visitor' + ': ' + req.connection.remoteAddress.green + ' is now viewing ' + 'Home Page'.green + '.');
 
       res.view({
-        posts: posts,
-        post: post
+        posts: posts
       });
     });
   },
