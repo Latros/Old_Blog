@@ -1,8 +1,0 @@
-<% _.each(posts, function(post) { %>
-  <div class="post">
-    <h3><i class="fa fa-clock-o"></i> <%= post.createdAt.toString().substring(0,10) %> by <%- post.author %></h3>
-    <h2><a href="/read/<%= post.slug %>"><i class="fa fa-<%- post.icon %>"></i><%= post.title %></a></h2>
-
-    <%- post.content %>
-  </div>
-<% }); %>
